@@ -51,11 +51,7 @@ public class Servlet4 extends HttpServlet {
         response.getWriter().println("Made it to Servlet 3!" + "<br>");
         String choice = request.getParameter("itemToDelete");
         response.getWriter().append("Item to be deleted: " + choice + "<br>");
-        
-        
-       
-        
-         
+   
         try {
             String deleteSQL = "DELETE FROM inventory WHERE NUMBER='"+choice+"' ";
             
@@ -79,11 +75,8 @@ public class Servlet4 extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
             response.getWriter().append("SQL Exception!");
-
         }
-        
-        
-        
+  
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
