@@ -61,10 +61,7 @@ public class Servlet2 extends HttpServlet {
         String Quantity = request.getParameter("quantity");
         response.getWriter().append("Quantity: " + Quantity + "<br>");
         int itemQuantity = Integer.parseInt(Quantity);
-        
-
-        
-         
+  
         try {
             String insertSQL = "INSERT INTO inventory (NUMBER,NAME,DISTRIBUTOR,DESCRIPTION,QUANTITY) VALUES ('"+itemNumber+"','"+itemName+"', '"+itemDistributor+"','"+itemDescription+"', '"+itemQuantity+"') ";
             
@@ -97,9 +94,7 @@ public class Servlet2 extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
             response.getWriter().append("SQL Exception!");
-
         }
-        
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
